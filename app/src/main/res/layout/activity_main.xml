@@ -13,13 +13,13 @@
         android:layout_height="550dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
-        android:background="@drawable/rounded_layout"
-        android:backgroundTint="?android:backgroundTint"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497">
 
         <ImageView
             android:id="@+id/imageView"
@@ -43,37 +43,77 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/edAlcool"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:ems="10"
-            android:hint="Preço da gasolina"
-            android:inputType="numberDecimal" />
+            android:background="@drawable/rounded_layout"
+            android:backgroundTint="?android:backgroundTint">
+            <EditText
+                android:id="@+id/edAlcool"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginHorizontal="30dp"
+                android:ems="10"
+                android:hint="Preço do Álcool"
+                android:inputType="numberDecimal"
+                />
+        </FrameLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_layout"
+            android:backgroundTint="?android:backgroundTint"
+            android:layout_marginVertical="20dp"
+            >
         <EditText
             android:id="@+id/edGasolina"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="alcool"
-            android:inputType="numberDecimal" />
-
-        <Switch
-            android:id="@+id/swPercentual"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_height="64dp"
             android:layout_marginHorizontal="30dp"
-            android:text="75%" />
+            android:ems="10"
+            android:hint="Preço da Gasolina"
+            android:inputType="numberDecimal"
+            android:background="#343434" />
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp">
+
+            <TextView
+                android:id="@+id/tv70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="70%"
+                android:textColor="#ffffff"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/tv75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="75%"
+                android:layout_alignParentEnd="true"
+                android:textColor="#ffffff"
+                android:textSize="24dp" />
+
+            <Switch
+                android:id="@+id/swPercentual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
 
         <Button
             android:id="@+id/btCalcular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginVertical="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginVertical="30dp"
             android:backgroundTint="#CB584C"
             android:text="Calcular" />
 
